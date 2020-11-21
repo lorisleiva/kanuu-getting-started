@@ -22,3 +22,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// Kanuu and Paddle.
+Route::get('kannu/{identifier}', '\Kanuu\Laravel\RedirectToKanuu')->name('kanuu.redirect');
+Route::post('webhooks/paddle', '\Kanuu\Laravel\HandlePaddleWebhook')->name('webhooks.paddle');

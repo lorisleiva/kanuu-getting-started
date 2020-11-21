@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "081783bb13c110b6f357d7cca8828460",
+    "content-hash": "d51a61ca237301e7ac9972803b1ca9f4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -888,6 +888,66 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.7.0"
             },
             "time": "2020-09-30T07:37:11+00:00"
+        },
+        {
+            "name": "kanuu-io/kanuu-laravel",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kanuu-io/kanuu-laravel.git",
+                "reference": "5da23a260ea7648ff6a94d93d309f9f4beb750a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kanuu-io/kanuu-laravel/zipball/5da23a260ea7648ff6a94d93d309f9f4beb750a2",
+                "reference": "5da23a260ea7648ff6a94d93d309f9f4beb750a2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
+                "illuminate/contracts": "^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kanuu\\Laravel\\KanuuServiceProvider"
+                    ],
+                    "aliases": {
+                        "Kanuu": "Kanuu\\Laravel\\Facades\\Kanuu"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kanuu\\Laravel\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Integrate Kanuu to your Laravel application",
+            "homepage": "https://github.com/kanuu-io/kanuu-laravel",
+            "keywords": [
+                "kanuu",
+                "laravel",
+                "paddle",
+                "subscription"
+            ],
+            "support": {
+                "issues": "https://github.com/kanuu-io/kanuu-laravel/issues",
+                "source": "https://github.com/kanuu-io/kanuu-laravel/tree/main"
+            },
+            "time": "2020-11-21T15:18:40+00:00"
         },
         {
             "name": "laravel/framework",
@@ -7310,7 +7370,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "kanuu-io/kanuu-laravel": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
